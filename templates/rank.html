@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title class="center_form">Song Rankings</title>
+        <link rel="stylesheet" href="../static/style.css" />
+    </head>
+    <body>
+        <style>
+            .center_form {
+                text-align: center;
+            }
+            body {
+                background: #f4f4f4;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+        </style>
+        <div class="center_form" >
+            <p class="center_form">Todays rankings</p>
+            {% for k,v in data.items() %}
+                <table>
+                    <tr>
+                        <th>Song Title</th>
+                        <th>Song ranking</th>
+                    </tr>
+                    <tr>
+                        <td>{{ k}}</td>
+                        <td>{{ v }}</td>
+                    </tr>
+                
+                </table>
+            {% endfor %}
+
+
+        </div>
+    </body>
+</html>
